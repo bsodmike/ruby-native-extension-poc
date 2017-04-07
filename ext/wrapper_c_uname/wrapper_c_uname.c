@@ -8,8 +8,7 @@ VALUE Uname = Qnil;
 void Init_wrapper_c_uname();
 VALUE method_uname_rv();
 
-void
-Init_wrapper_c_uname() {
+void Init_wrapper_c_uname() {
     Uname = rb_define_module("Uname");
     rb_define_singleton_method(Uname, "rv", method_uname_rv, 0);
 }
