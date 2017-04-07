@@ -27,6 +27,9 @@ VALUE method_uname_rv() {
 
     fclose(fp);
 
+    /**
+     * Return the actual string of info without the trailing `\n` char.
+     */
     return rb_str_new(buf, strlen(buf) - 1);
 }
 
